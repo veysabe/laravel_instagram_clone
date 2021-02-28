@@ -13,11 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
+
+Route::get('/mail', function () {
+    return new \App\Mail\NewUserWelcomeEmail();
+});
 
 Route::get('/', [\App\Http\Controllers\PostsController::class, 'index']);
 

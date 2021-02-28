@@ -25,15 +25,15 @@
                 </div>
                 <div class="d-flex">
                     <div>
-                        <span class="font-weight-bold">{{ $user->posts->count() }}</span>
+                        <span class="font-weight-bold">{{ $postCount }}</span>
                         <span>публикаций</span>
                     </div>
                     <div class="ml-5">
-                        <span class="font-weight-bold">{{ $user->profile->followers->count() }}</span>
+                        <span class="font-weight-bold">{{ $followerCount }}</span>
                         <span>подписчиков</span>
                     </div>
                     <div class="ml-5">
-                        <span class="font-weight-bold">{{ $user->following->count() }}</span>
+                        <span class="font-weight-bold">{{ $followingCount }}</span>
                         <span>подписок</span>
                     </div>
                 </div>
