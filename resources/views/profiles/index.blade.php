@@ -13,7 +13,8 @@
                 <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center mb-3">
                         <div class="h4">{{ $user->username }}</div>
-                        <button class="btn btn-primary ml-3">Подписаться</button>
+
+                        <follow-button></follow-button>
                     </div>
 
                     @can('update', $user->profile)
