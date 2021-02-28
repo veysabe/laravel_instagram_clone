@@ -14,7 +14,7 @@
                     <div class="d-flex align-items-center mb-3">
                         <div class="h4">{{ $user->username }}</div>
 
-                        <follow-button></follow-button>
+                        <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
                     </div>
 
                     @can('update', $user->profile)
@@ -29,11 +29,11 @@
                         <span>публикаций</span>
                     </div>
                     <div class="ml-5">
-                        <span class="font-weight-bold">370</span>
+                        <span class="font-weight-bold">{{ $user->profile->followers->count() }}</span>
                         <span>подписчиков</span>
                     </div>
                     <div class="ml-5">
-                        <span class="font-weight-bold">284</span>
+                        <span class="font-weight-bold">{{ $user->following->count() }}</span>
                         <span>подписок</span>
                     </div>
                 </div>

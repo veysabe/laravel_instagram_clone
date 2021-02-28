@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/follow/{user}', [\App\Http\Controllers\FollowsController::class, 'store']);
+
 Route::post('/p', [\App\Http\Controllers\PostsController::class, 'store'])->name('post.store');
 
 Route::get('/p/create', [\App\Http\Controllers\PostsController::class, 'create'])->name('post.create');
